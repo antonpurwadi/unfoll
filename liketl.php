@@ -5,14 +5,14 @@
 #######EDIT THIS AREA#########
 #######END OF EDIT AREA########
 require_once('func.php');
-echo "Username?\nInput : ";
+echo "Mohon Input\nUsername : ";
 $username =  trim(fgets(STDIN));
 if (!file_exists("$username.ig")) {
-echo "Password?\nInput : ";
+echo "Mohon Input\nPassword : ";
 $password = trim(fgets(STDIN));
     $log = masuk($username, $password);
     if ($log == "data berhasil diinput") {
-        echo "Berhasil Input Data, silahkan jalankan ulang\n";
+        echo "Berhasil Input Data, silahkan Ketik ulang php like.php\n";
     } else {
         echo "Gagal Input Data";
     }
@@ -21,7 +21,7 @@ $password = trim(fgets(STDIN));
     $gip    = json_decode($gip);
     echo "Hai, $gip->username [".$gip->id."] Klik Enter Untuk Melanjutkan..";
     $skip = trim(fgets(STDIN));
-    echo "Jeda Per Sesi?\nInput : ";
+    echo "Masukan Waktu Jeda?\nSatuan Detik : ";
     $jeda = trim(fgets(STDIN));
     if($jeda<60){
         echo "Waktu telah diatur 60 detik, karena waktu yang ada masukan rentan terhadap keamanan akun.\n";
